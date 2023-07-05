@@ -15,7 +15,7 @@ const ProductCard = ({ prodCart }) => {
   return (
     <article className='productCart__article'>
         <header className='productCart__contentImg'>
-            <img className='productCart__content-img' src={prodCart.product.images[0].url} alt="" />
+            <img className='productCart__content-img' src={prodCart?.product?.productImgs[0]?.url} alt="" />
         </header>
 
         <section className='productCart__section'>

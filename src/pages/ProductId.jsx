@@ -12,18 +12,19 @@ const ProductId = () => {
 
     const { id } = useParams()
 
-    const url = `https://e-commerce-api-v2.academlo.tech/api/v1/products/${id}`
+    const URL_BASE = import.meta.env.VITE_REACT_APP_URL
+    const url = `${URL_BASE}/products/${id}`
     const [product, getProductsById] = useFetch(url)
 
     useEffect(() => {
         getProductsById()
-    },[id])
+    }, [id])
 
     return (
         <div className='productId'>
             <div className='productId-Slider'><SliderImg product={product} /></div>
             <div className='productId-Product'><ProductInfo product={product} /></div>
-            <div className='productId-Similar'><SimilarProduct product={product}/></div>      
+            <div className='productId-Similar'><SimilarProduct product={product} /></div>
         </div>
     )
 }

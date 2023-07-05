@@ -34,7 +34,7 @@ const SliderImg = ({ product }) => {
       <button onClick={handlePrevious} className='slider__arrow slider_left'>&lt;</button>
       <div style={objStyle} className='slider__interior'>
         {
-          product?.images.map((imgInfo) => (
+            product?.productImgs.map((imgInfo) => (
             <div className='slider__img-container' key={imgInfo.id}>
               <img
                 className='slider__img'

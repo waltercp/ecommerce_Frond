@@ -5,10 +5,13 @@ import '../../styles/productId_similarProduct.css'
 
 
 const SimilarProduct = ({ product }) => {
-    const url1 = `https://e-commerce-api-v2.academlo.tech/api/v1/products?categoryId=4`
+
+
+    const URL_BASE = import.meta.env.VITE_REACT_APP_URL
+    const url = `${URL_BASE}/products?categoryId=${product?.categoryId}`
 
     const [filterProducts, getProductsByCategory] = useFetch(url1)
- 
+
 
     useEffect(() => {
         if (product) {
@@ -24,7 +27,7 @@ const SimilarProduct = ({ product }) => {
             <div className='similarProduct-content'>
                 {
                     filterProducts?.map(prod => {
-                        if(prod.id !== product.id){
+                        if (prod.id !== product.id) {
                             return (<CardProduct
                                 key={prod.id}
                                 product={prod}

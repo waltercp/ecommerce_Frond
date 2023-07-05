@@ -8,10 +8,11 @@ const useAutentication = () => {
 
     const [create, setCreate] = useState(false)
     const [createError, setCreateError] = useState(false)
-    
+
 
     const CreateNewUser = data => {
-        const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/users'
+        const URL_BASE = import.meta.env.VITE_REACT_APP_URL
+        const url = `${URL_BASE}/users`
         axios.post(url, data)
             .then(res => {
                 console.log(res.data)
@@ -26,14 +27,15 @@ const useAutentication = () => {
                 setTimeout(() => {
                     setCreateError(false)
                 }, 1800)
-                
+
             })
     }
 
 
     const loginUser = data => {
 
-        const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/users/login'
+        const URL_BASE = import.meta.env.VITE_REACT_APP_URL
+        const url = `${URL_BASE}/users/login`
         axios.post(url, data)
             .then(res => {
                 localStorage.setItem('token', res.data.token)
@@ -48,11 +50,11 @@ const useAutentication = () => {
                 setTimeout(() => {
                     setLoginError(false)
                 }, 1800)
-                
+
             })
     }
 
-    return { CreateNewUser, loginUser, loginError,create,createError }
+    return { CreateNewUser, loginUser, loginError, create, createError }
 
 }
 
