@@ -10,7 +10,7 @@ const SimilarProduct = ({ product }) => {
     const URL_BASE = import.meta.env.VITE_REACT_APP_URL
     const url = `${URL_BASE}/products?categoryId=${product?.categoryId}`
 
-    const [filterProducts, getProductsByCategory] = useFetch(url1)
+    const [filterProducts, getProductsByCategory] = useFetch(url)
 
 
     useEffect(() => {
