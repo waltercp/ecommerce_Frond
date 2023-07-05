@@ -10,6 +10,7 @@ import { setCategoyName } from '../../store/slices/category.slice'
 
 
 const FilterCategory = () => {
+    
 
     const URL_BASE = import.meta.env.VITE_REACT_APP_URL
 
@@ -33,15 +34,18 @@ const FilterCategory = () => {
 
         const url = `${URL_BASE}/products?categoryId=${id}` 
         dispatch(getAllProductsThunk(url))
+        console.log(url )
     }
 
 
     const handleClickProducts = () => {
         dispatch(  setCategoyName(null))
         dispatch(getAllProductsThunk())
+        console.log(url )
     }
 
     return (
+        
         <article className='filterCategory_article'>
             <DropDown header="Category">
                 <ul className='filterCategory__category'>

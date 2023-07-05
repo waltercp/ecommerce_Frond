@@ -40,9 +40,8 @@ const CardProduct = ({ product }) => {
   return (
     <article className="product" onClick={handleSelectProduct}>
       <header className="product__header">
-        <img className='header__img image1' src={product?.productImgs[0].url} alt={product.title} />
-
-        <img className='header__img image2' src={product?.productImgs[1].url} alt={product.title} />
+        <img className="product__img product__img-1" src={product?.productImgs[0].url} alt="" />
+        <img className="product__img product__img-2" src={product?.productImgs[1].url} alt="" />
       </header>
 
       <div className="product__body">

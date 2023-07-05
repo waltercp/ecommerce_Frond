@@ -12,10 +12,10 @@ const cartSlice = createSlice({
 export const { setCartGlobal } = cartSlice.actions
 export default cartSlice.reducer
 
-
 export const getAllProductsCartThunk = () => dispatch => {
     const URL_BASE = import.meta.env.VITE_REACT_APP_URL
     const url = `${URL_BASE}/cart`
+    
     axios.get(url, getConfigToken())
         .then(res => dispatch(setCartGlobal(res.data)))
         .catch(err => console.log(err))
