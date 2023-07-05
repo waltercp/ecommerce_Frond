@@ -32,9 +32,10 @@ const FilterCategory = () => {
     const handleClickCategory = id => {
         dispatch(setCategoyName(id))
 
-        const url = `${URL_BASE}/products?categoryId=${id}` 
+        const url = `${URL_BASE}/products?category=${id}` 
         dispatch(getAllProductsThunk(url))
         console.log(url )
+       
     }
 
 

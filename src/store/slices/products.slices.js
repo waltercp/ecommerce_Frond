@@ -19,4 +19,5 @@ const URL_BASE = import.meta.env.VITE_REACT_APP_URL
   	axios.get(url)
   	.then(res => dispatch(setProductsGlobal(res.data)))
   	.catch(err => console.log(err))
+     
   }
