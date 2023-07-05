@@ -1,0 +1,122 @@
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 3em;
+    background-color: white;
+    border-radius: 0 2em 2em 0;
+
+}
+
+.product-info__brand {
+    font-size: 16px;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.product-info__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Yantramanav', sans-serif;
+    color: #515151;
+    text-align: center;
+
+}
+
+.product-info__description {
+    font-size: 13.5px;
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    color: black;
+    font-family: 'Yantramanav', sans-serif;
+
+
+}
+
+.product-info__footer {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    width: 100%;
+    max-width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1em;
+    text-align: center;
+
+}
+
+.product-info__price,
+.product-info__quantity {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+
+}
+
+.product-info__price span,
+.product-info__quantity span {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #aaa;
+    width: 100px;
+}
+
+.product-info__price span:nth-of-type(2)::before {
+    content: "$";
+}
+
+.product-info__price span:nth-child(2) {
+    color: black;
+    font-weight: bold;
+}
+
+.product-info__quantity div {
+    display: flex;
+}
+
+.product-info__quantity button {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    background-color: black;
+    color: white;
+
+}
+
+.product-info__quantity div div {
+    font-size: 18px;
+}
+
+
+
+
+.product-info__add-to-cart {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.6em;
+    text-align: center;
+    background-color: brown;
+    color: white;
+    border-radius: 0.4em;
+    grid-column: span 2;
+}
+
+.product-info__add-to-cart:hover {
+    filter: brightness(1.15);
+}
+
+@media (max-width: 977px) {
+    .product-info {
+       border-radius: 0 0 1em 1em;
+       padding: 0 3em 2em;
+    }
+
+    .product-info-container {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2em;
+    }
+}

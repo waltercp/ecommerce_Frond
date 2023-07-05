@@ -1,0 +1,23 @@
+.productId {
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  
+  .productId-Slider{
+    display: flex;
+    justify-content: center;
+    width: 30em;
+  }
+  .productId-Product{
+    width: 30em;
+  }
+  
+  .productId-Similar {
+    width: 100%;
+  }
+  
+
+  

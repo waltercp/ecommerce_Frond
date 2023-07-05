@@ -1,0 +1,144 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 60px;
+  align-items: center;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+}
+
+.home__input {
+  width: 60%;
+  height: 3rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid gray;
+  padding: 0.5rem;
+  outline: none;
+  position: absolute;
+  top: 6em;
+  right: 10%;
+}
+
+.home__content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 4em;
+}
+
+
+.filterCategory {
+  position: fixed;
+  top: 5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.home__Product {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1em;
+  margin-left: 15.2em;
+  justify-content: center;
+}
+
+
+.home_filter_active {
+  margin-top: 30px;
+  font-weight: 800;
+  color: brown;
+}
+
+
+
+
+@media (max-width: 700px) {
+  .home{
+    padding: 0.5em;
+  }
+  .filterCategory {
+    display: none
+  }
+
+  .home_filter_active {
+    display: none;
+  }
+
+  .home__Product {
+    margin: 1em 0;
+  }
+
+  .home__input {
+    width: 70%;
+    left: 15%;
+    margin-left: 1em;
+  }
+
+  .menuResponsive {
+    background-color: brown;
+    position: fixed;
+    top: 5em;
+    left: 0.2em;
+    padding: 0.3em;
+    border-radius: 50%;
+    z-index: 800;
+    
+  }
+
+  .menuResponsiveClose {
+    display: flex;
+    background-color: brown;
+    position: fixed;
+    top: 5em;
+    left: 0.5em;
+    width: 250px;
+    padding: 0.3em;
+    border-radius: 0 1em 1em 0;
+    z-index: 800;
+    transition: left 1.s;
+  }
+
+  .menuResponsiveClose::before {
+    content: "Filter";
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    padding-left: 10px;
+  }
+
+  .filterCategory {
+    background-color: rgb(222, 222, 226, 95%);
+    position: fixed;
+    left: 0;
+    top: 4em;
+    width: 270px;
+    display: flex;
+    justify-content: flex-start;
+    transition: left .5s;
+    padding: 0;
+    z-index: 500;
+  }
+
+  .active {
+    left: -110%
+  }
+
+  .bx-filter {
+    display: inline-block;
+    font-size: 30px;
+  }
+
+  .bxs-x-circle {
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 150px;
+    border-radius: 50%;
+    color: white;
+  }
+
+
+}
