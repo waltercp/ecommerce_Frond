@@ -47,7 +47,7 @@ const SliderImg = ({ product }) => {
       </div>
       <div className='slider-muestra'>
         {
-          product?.images.map((imgInfo, i) => (
+          product?.productImgs.map((imgInfo, i) => (
             <li
               key={imgInfo.id}
               className={numbertImg === i? 'selecto' : ''}
